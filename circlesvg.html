@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Images</title>
+    <style>
+        body {
+            background-image: url(./IMAGES/svg.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 200vh; /* Making page scrollable */
+            overflow-y: scroll;
+        }
+
+        @keyframes moveLeftRight {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(50px); }
+            100% { transform: translateX(0); }
+        }
+
+        .moving-circle {
+            animation: moveLeftRight 2s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body>
+  <!---circle---->
+    <svg width="500" height="500" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="100" cy="100" r="50" fill="blue" class="moving-circle" />
+    </svg>
+
+    <svg width="500" height="500" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="100" cy="100" r="50" fill="black" class="moving-circle" />
+    </svg>
+
+</body>
+</html>
